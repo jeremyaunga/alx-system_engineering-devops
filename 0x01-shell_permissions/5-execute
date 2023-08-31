@@ -1,0 +1,2 @@
+#!/bin/basj
+chmod u+x,g+x,o+r hello
