@@ -1,1 +1,1 @@
-display content of a given file
+display content of 2 files
