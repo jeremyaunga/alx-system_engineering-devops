@@ -1,1 +1,1 @@
-Display the last 10 lines of a file
+a script that displays the third line of the file
