@@ -1,0 +1,35 @@
+Title: Demystifying the Journey: From URL to Webpage
+
+Introduction:
+Have you ever wondered what happens behind the scenes when you type a URL into your browser and hit Enter? In this blog post, we'll explore the journey of a request to access https://www.google.com, breaking down each step in the process to understand how your browser communicates with the web server and retrieves the requested webpage.
+
+1. DNS Request:
+The process begins with a Domain Name System (DNS) request. When you type https://www.google.com into your browser, your computer needs to translate the human-readable domain name (www.google.com) into an IP address, which is required to locate the server hosting the website. The DNS resolver on your computer sends a query to a DNS server, which responds with the corresponding IP address.
+
+2. TCP/IP:
+Once the IP address is obtained, your browser initiates a Transmission Control Protocol (TCP) connection to the server using the Internet Protocol (IP). TCP/IP is the fundamental communication protocol of the internet, responsible for breaking down data into packets, transmitting them across the network, and reassembling them at the destination.
+
+3. Firewall:
+Before establishing the TCP connection, the request may encounter a firewall, a security measure designed to monitor and control incoming and outgoing network traffic based on predetermined security rules. The firewall examines the request to ensure it meets the specified criteria before allowing it to proceed.
+
+4. HTTPS/SSL:
+If the connection is successful, the browser and server negotiate the use of HTTPS (Hypertext Transfer Protocol Secure) over SSL/TLS (Secure Sockets Layer/Transport Layer Security) for encrypted communication. HTTPS encrypts the data exchanged between the browser and server, protecting it from interception or tampering by malicious actors.
+
+5. Load-Balancer:
+In the case of large websites like Google, the incoming requests are often distributed across multiple servers to prevent overloading and ensure optimal performance. A load balancer sits between the client and server, distributing incoming requests evenly among a pool of servers based on predefined algorithms such as round-robin or least connections.
+
+6. Web Server:
+Once the request reaches the web server hosting www.google.com, the server processes the request and retrieves the requested webpage or resource. The web server is responsible for handling HTTP requests, executing server-side code (if applicable), and generating dynamic content before sending the response back to the client.
+
+7. Application Server:
+In some cases, the web server may need to communicate with an application server to fulfill the request. Application servers are responsible for executing server-side code, interacting with databases, and performing other complex tasks required to generate dynamic content or process user input.
+
+8. Database:
+If the requested webpage or resource relies on data stored in a database, the application server may query the database to retrieve the necessary information. The database contains structured data organized in tables, which the application server can access and manipulate using database queries.
+
+Conclusion:
+From the initial DNS request to the retrieval of the requested webpage, the journey of a URL through the web stack involves multiple steps and components working together seamlessly. Understanding this process provides valuable insights into how the internet functions and helps us appreciate the complexity behind the simple act of browsing the web.
+
+By demystifying the inner workings of web communication, we gain a deeper understanding of the technologies that power the modern internet and the importance of security, scalability, and performance in delivering a seamless browsing experience.
+
+In conclusion, the next time you type https://www.google.com into your browser, remember the intricate journey your request takes through the web stack before the familiar search page appears on your screen.
