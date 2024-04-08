@@ -1,25 +1,6 @@
-#!/bin/bash
-
-# Check if Nginx is installed
-if ! dpkg -l | grep -q nginx; then
-    echo "Nginx is not installed. Installing..."
-    apt-get update
-    apt-get install -y nginx
-fi
-
-# Check if Nginx is running
-if ! pgrep nginx >/dev/null; then
-    echo "Nginx is not running. Starting..."
-    service nginx start
-fi
-
-# Configure Nginx to listen on port 80
-if ! grep -q "listen 80;" /etc/nginx/sites-available/default; then
-    sed -i 's/listen [::]:80 default_server;/listen 80 default_server;/g' /etc/nginx/sites-available/default
-fi
-
-# Restart Nginx service to apply changes
+#!/usr/bin/env bash
+#configure nginx server to listen for port 80
+#this is spam
+#this is spam
+sed -i 's/8080/80/g' /etc/nginx/sites-enabled/default
 service nginx restart
-
-echo "Nginx is now configured to listen on port 80."
-
