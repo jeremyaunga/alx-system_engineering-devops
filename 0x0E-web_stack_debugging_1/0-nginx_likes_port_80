@@ -1,7 +1,11 @@
 #!/usr/bin/env bash
-# Open the 80 port
-rm /etc/nginx/xites-enabled/default
-#configure nginx to listen on port 80 for all active IPv4 IPs
+
+# Remove the symbolic link to the default configuration file
+rm /etc/nginx/sites-enabled/default
+
+# Create a symbolic link to the default configuration file for port 80
 ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
-#sed -i 's/8080/80/g' /etc/nginx/sites-enabled/default
+
+# Restart the nginx service to apply the changes
 service nginx restart
+
