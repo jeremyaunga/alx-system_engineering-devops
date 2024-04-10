@@ -1,2 +1,4 @@
+rm: cannot remove '/etc/nginx/xites-enabled/default': No such file or directory
+ln: failed to create symbolic link '/etc/nginx/sites-enabled/default': File exists
  * Restarting nginx nginx
    ...done.

@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
 # Open the 80 port
 sed -i 's/8080/80/g' /etc/nginx/sites-enabled/default
-pkill -o nginx
+kill "$(pgrep 'nginx' | head -1)"
+

@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
 # Open the 80 port
-sed -i 's/8080/80/g' /etc/nginx/sites-enabled/default
+rm /etc/nginx/xites-enabled/default
+#configure nginx to listen on port 80 for all active IPv4 IPs
+ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+#sed -i 's/8080/80/g' /etc/nginx/sites-enabled/default
 service nginx restart
