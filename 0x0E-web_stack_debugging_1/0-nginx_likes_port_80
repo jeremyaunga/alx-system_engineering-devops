@@ -1,11 +1,6 @@
 #!/usr/bin/env bash
-
-# Remove the symbolic link to the default configuration file
-rm /etc/nginx/sites-enabled/default
-
-# Create a symbolic link to the default configuration file for port 80
-ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
-
-# Restart the nginx service to apply the changes
+#configure nginx server to listen for port 80
+#this is spam
+#this is spam
+sed -i 's/8080/80/g' /etc/nginx/sites-enabled/default
 service nginx restart
-
